@@ -4,12 +4,7 @@ import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify
 import * as helmet from 'helmet';
 import { AppModule } from './app.module';
 
-const {
-  APP_HOST: appHost,
-  APP_NAME: appName,
-  APP_DESCRIPTION: appDescription,
-  APP_PORT: appPort,
-} = process.env;
+const { APP_HOST: appHost, APP_NAME: appName, APP_DESCRIPTION: appDescription, APP_PORT: appPort } = process.env;
 
 async function bootstrap() {
   const port = appPort ? parseInt(appPort) : 3000;
