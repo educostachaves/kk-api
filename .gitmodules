@@ -1,0 +1,8 @@
+
+[submodule "kk-product"]
+	path = kk-product
+	url = git@github.com:educostachaves/kk-product.git
+
+[submodule "kk-cart"]
+	path = kk-cart
+	url = git@github.com:educostachaves/kk-product.git
