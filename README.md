@@ -22,15 +22,37 @@ $ docker-compose up
   - `docker-compose up mongo` MongoDb
   - `docker-compose up mongo-express` Mongo Express
 
-## API Tests
+## EndPoints
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+- `GET /products` - Get all Products from Products API
+- `GET /carts/:id` - Get a Cart by Id from Carts API
+- `POST /carts/insertCart` - Post a new Cart into Carts Api
+```json
+// Body
+{
+  "userId": 0,
+  "products": [{
+    "productId": 0,
+    "price": 0,
+    "quantity": 0
+  }]
+}
+```
+- `POST /carts/insertProduct` - Post a new Product by Carts into Cart Api
+```json
+// Body
+{
+  "productId": 0,
+  "price": 0,
+  "quantity": 0,
+  "cart": 0,
+}
+```
+- `DELETE /carts/deleteProduct` - Delete a Product by Carts into Cart Api
+```json
+// Body
+{
+  "productId": 0,
+  "cart": 0,
+}
 ```
